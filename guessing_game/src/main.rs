@@ -25,8 +25,6 @@ fn main() {
             Err(_)  => continue,
         };
 
-//            .expect("Пожалуйста, введите число!");
-
         println!("Ваша попытка: {}", guess);
 
         match guess.cmp(&secret_number) {
@@ -39,4 +37,5 @@ fn main() {
         }
     }
 }
+
 
