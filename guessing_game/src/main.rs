@@ -25,7 +25,12 @@ fn main() {
             Err(_)  => continue,
         };
 
-        println!("Ваша попытка: {}", guess);
+        if guess < 1 || guess > 100 {
+            println!("Загаданное число должно быть между 1 и 100");
+            continue;
+        }
+
+//        println!("Ваша попытка: {}", guess);
 
         match guess.cmp(&secret_number) {
             Ordering::Less		=> println!("Слишком маленькое!"),
