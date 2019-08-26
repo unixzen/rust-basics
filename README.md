@@ -1,1 +1,1 @@
-# Simplest Examples at Rust Programming Language
+Simplest Examples at Rust Programming Language
