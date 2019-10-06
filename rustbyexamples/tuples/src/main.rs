@@ -9,6 +9,13 @@ fn reverse(pair: (i32, bool)) -> (bool, i32) {
     (boolean, integer)
 }
 
+fn transpose(matrix: Matrix) -> Matrix {
+    // `let` можно использовать для создания связи между кортежем и переменной
+    let Matrix(a, b, c, d) = matrix;
+
+    Matrix(a, c, b, d)
+}
+
 // Это структура используется для задания
 #[derive(Debug)]
 struct Matrix(f32, f32, f32, f32);
@@ -58,7 +65,8 @@ fn main() {
     println!("{:?}, {:?}, {:?}, {:?}", a, b, c, d);
 
     let matrix = Matrix(1.1, 1.2, 2.1, 2.2);
-    println!("{}", matrix);
+    println!("Matrix:\n{}", matrix);
+    println!("Transpose:\n{}", transpose(matrix));
 
 }
 
